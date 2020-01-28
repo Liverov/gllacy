@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Антон Ливеров](https://up.htmlacademy.ru/htmlcss/27/user/142124).
-* Наставник: `Неизвестно`.
+* Наставник: [Карина Карапетян](https://htmlacademy.ru/profile/karinaweb).
 
 ---
 
