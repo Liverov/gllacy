@@ -33,12 +33,12 @@
         <ul>
           <li>
             <a href="">
-              <svg width="17" height="17">
-                <path fill="#ffffff" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
-                  S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
-                  S11,4.019,11,6.5S8.981,11,6.5,11z"/>
+              <svg width="21" height="19">
+                <polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
+                <path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
+                  />
               </svg>
-              Вход
+              <span>Вход</span>
             </a>
             <div>
               <form action="https://echo.htmlacademy.ru" method="post">
@@ -65,10 +65,10 @@
           <li>
             <button type="button"> 
               <span>Поиск</span>
-              <svg width="21" height="19">
-                <polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
-                <path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
-                  />
+              <svg width="17" height="17">
+                <path fill="#ffffff" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
+                  S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
+                  S11,4.019,11,6.5S8.981,11,6.5,11z"/>
               </svg>
             </button>
             <div>
@@ -87,7 +87,7 @@
                 <path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
                   L17.372,13z"/>
               </svg>
-              2 товара
+              <span>2 товара</span>
             </button>
             <div>
               <form action="http://echo.htmlacademy.ru" method="post">
@@ -112,7 +112,7 @@
                               </svg>
                             </button>
                           </td>
-                          <td></td>
+                          <td><img src="img/icecream-1.jpg" width="33" height="33" alt="Мороженое пломбир с апельсиновым джемом"></td>
                           <td>Пломбир с апельсиновым джемом</td>
                           <td>1,5 кг х 200 руб.</td>
                           <td>300 руб.</td>
@@ -128,7 +128,7 @@
                               </svg>
                             </button>
                           </td>
-                          <td></td>
+                          <td><img src="img/icecream-2.jpg" width="33" height="33" alt="Мороженое пломбир с апельсиновым джемом"></td>
                           <td>Клубничный пломбир с присыпкой 
                             из белого шоколада</td>
                           <td>1,5 кг х 300 руб.</td>
@@ -170,42 +170,140 @@
     
       <section>
         <h2>Фильтр списка мороженого</h2>
+        <form action="https://echo.htmlacademy.ru" method="get">
         <div>
-          <p>Сортировка</p>
-          <svg width="11px" height="10px">
+          <label for="filter-sort">Сортировка:</label>
+          <!-- <svg width="11px" height="10px">
             <polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
-          </svg>
-          <!--SELECT-->
+          </svg> -->
+          <select name="sort" id="filter-sort">
+            <option value="popular">по популярности</option>
+            <option value="price">по цене</option>
+          </select>
         </div>
         <div>
-          <p>Цена: 100 Руб. - 500 руб.</p>
-          <svg width="20px" height="23px">
-            <path opacity="0.3" fill="#ABABAB" d="M10,20C4.477,20,0,15.522,0,10v2c0,5.522,4.477,10,10,10c5.522,0,10-4.478,10-10v-2
-              C20,15.522,15.522,20,10,20z"/>
-            <circle fill="#FFFFFF" cx="10" cy="10" r="10"/>
-            <circle fill="#ABABAB" cx="10" cy="10" r="2"/>
-          </svg>
-          <!--RANGE-->
+          <label for="filter-price_range">Цена: 100 Руб. - 500 руб.</label>
+          <input type="range" id="filter-price_range" name="price_range"
+         min="0" max="1000" step="100">
+         <svg width="20px" height="23px">
+          <path opacity="0.3" fill="#ABABAB" d="M10,20C4.477,20,0,15.522,0,10v2c0,5.522,4.477,10,10,10c5.522,0,10-4.478,10-10v-2
+            C20,15.522,15.522,20,10,20z"/>
+          <circle fill="#FFFFFF" cx="10" cy="10" r="10"/>
+          <circle fill="#ABABAB" cx="10" cy="10" r="2"/>
+        </svg>
+        <svg width="20px" height="23px">
+          <path opacity="0.3" fill="#ABABAB" d="M10,20C4.477,20,0,15.522,0,10v2c0,5.522,4.477,10,10,10c5.522,0,10-4.478,10-10v-2
+            C20,15.522,15.522,20,10,20z"/>
+          <circle fill="#FFFFFF" cx="10" cy="10" r="10"/>
+          <circle fill="#ABABAB" cx="10" cy="10" r="2"/>
+        </svg>
         </div>
         <div>
-          <p>Жирность:</p>
-          <svg width="25px" height="25px">
-            <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
-              C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z"/>
-            <circle cx="12.5" cy="12.5" r="4.5"/>
-          </svg>
-          <!--RADIO-->
+          <fieldset>
+            <legend>Жирность:</legend>
+            <ul>
+              <li>
+                <svg width="25" height="25" fill="#e6ebe9">
+                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
+                    C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z"/>
+                  <circle cx="12.5" cy="12.5" r="4.5"/>
+                </svg>
+                <input type="radio" name="richness-group" value="0" id="filter-richness0">
+                <label for="filter-richness0">
+                  0%
+                </label>
+              </li>
+              <li>
+                <svg width="25" height="25" fill="#e6ebe9">
+                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
+                    C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z"/>
+                  <circle cx="12.5" cy="12.5" r="4.5"/>
+                </svg>
+                <input type="radio" name="richness-group" value="10" id="filter-richness10" checked>
+                <label for="filter-richness10">
+                  до 10%
+                </label>
+              </li>
+              <li>
+                <svg width="25" height="25" fill="#e6ebe9">
+                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
+                    C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z"/>
+                  <circle cx="12.5" cy="12.5" r="4.5"/>
+                </svg>
+                <input type="radio" name="richness-group" value="30" id="filter-richness30">
+                <label for="filter-richness30">
+                  до 30%
+                </label>
+              </li>
+              <li>
+                <svg width="25" height="25" fill="#e6ebe9">
+                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
+                    C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z"/>
+                  <circle cx="12.5" cy="12.5" r="4.5"/>
+                </svg>
+                <input type="radio" name="richness-group" value="31" id="filter-richness_more30">
+                <label for="filter-richness_more30">
+                  выше 30%
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
         </div>
         <div>
-          <p>Наполнители:</p>
-          <svg width="27px" height="23px">
-            <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
-            <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
-              H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
-          </svg>
-          <!--CHECKBOXES-->
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <ul>
+              <li>
+                <svg width="27px" height="23px">
+                  <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
+                  <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+                    H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+                </svg>
+                <input type="checkbox" name="filler_choco" id="filter-filler_choco" checked>
+                <label for="filter-filler_choco">шоколадные</label>
+              </li>
+              <li>
+                <svg width="27px" height="23px">
+                  <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
+                  <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+                    H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+                </svg>
+                <input type="checkbox" name="filler_sugar" id="filter-filler_sugar" checked>
+                <label for="filter-filler_sugar">сахарные присыпки</label>
+              </li>
+              <li>
+                <svg width="27px" height="23px">
+                  <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
+                  <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+                    H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+                </svg>
+                <input type="checkbox" name="filler_fruits" id="filter-filler_fruits">
+                <label for="filter-filler_fruits">фрукты</label>
+              </li>
+              <li>
+                <svg width="27px" height="23px">
+                  <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
+                  <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+                    H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+                </svg>
+                <input type="checkbox" name="filler_syrups" id="filter-filler_syrups">
+                <label for="filter-filler_syrups">сиропы</label>
+              </li>
+              <li>
+                <svg width="27px" height="23px">
+                  <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
+                  <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+                    H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+                </svg>
+                <input type="checkbox" name="filler_jams" id="filter-filler_jams">
+                <label for="filter-filler_jams">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
         </div>
         <button type="submit">Применить</button>
+        </form>
       </section>
 
       <section>
