@@ -123,13 +123,13 @@
         <article>
           <h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <button type="button">Хочу варенье!</button>
+          <a href="#">Хочу варенье!</a>
         </article>
 
         <article>
           <h3>Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.      </p>
-          <button type="button">Хочу шоколадки!</button>
+          <a href="#">Хочу шоколадки!</a>
         </article>
 
       </section>
@@ -206,7 +206,11 @@
         <section>
           <h2>Подписка на рассылку</h2>
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-          <!-- ФОРМА ПОДПИСКИ -->
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <label for="user-subscribe">Email</label>
+            <input id="user-subscribe" type="email" name="subscribe" placeholder="email@example.com">
+            <button type="submit">Отправить</button>
+          </form>
         </section>
 
 
