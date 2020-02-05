@@ -12,12 +12,12 @@
       <nav class="main-navigation">
 
         <a class="main-header-logo" href="">
-          <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Глейси">
+          <img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Глейси">
         </a>
 
         <ul class="site-navigation">
-          <li class="item">
-            <a href="#">Каталог</a>
+          <li>
+            <a class="site-navigation-dropdown" href="#">Каталог</a>
             <ul>
               <li><a href="#">Новинки</a></li>
               <li><a href="catalog.html">Сливочное</a></li>
@@ -26,14 +26,19 @@
               <li><a href="#">Мелорин</a></li>
             </ul>
           </li>
-          <li class="item"><a href="#">Доставка и оплата</a></li class="item">
-          <li class="item"><a href="#">О компании</a></li class="item">
+          <li><a href="#">Доставка и оплата</a></li class="item">
+          <li><a href="#">О компании</a></li class="item">
         </ul>
 
         <ul class="user-navigation">
           <li>
             <button class="user-navigation-btn" type="button"> 
-              <span>Поиск</span>
+              <svg width="17" height="17">
+                <path fill="#ffffff" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
+                  S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
+                  S11,4.019,11,6.5S8.981,11,6.5,11z"/>
+              </svg>
+              <span class="visually-hidden">Поиск</span>
             </button>
             <div class="popup popup-search">
               <form class="search-form" action="http://echo.htmlacademy.ru" method="get">
@@ -46,11 +51,16 @@
 
           <li>
             <button class="user-navigation-btn" type="button"> 
+              <svg width="21" height="19">
+                <polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959"/>
+                <path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
+                  />
+              </svg>
               <span>Вход</span>
             </button>
             <div class="popup popup-login">
               <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                <p >
+                <p>
                   <label class="visually-hidden" for="user-login">Логин</labelclass="visually-hidden">
                   <input class="login-field-email" id="user-login" type="email" name="login" placeholder="email@example.com">
                 </p >
@@ -73,6 +83,12 @@
 
           <li>
             <button class="user-navigation-btn" type="button">
+              <svg width="21" height="20">
+                <path fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+                  L17.372,13z"/>
+                <circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
+                <circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
+              </svg>
               <span>Корзина</span>
             </button>
           </li>
@@ -129,43 +145,43 @@
       <section class="popular-products">
         <h2 class="visually-hidden">Список популярного мороженого</h2>
         
-        <ul class="products-list">
-          <li class="product-item">
-            <h3 class="product-item-title">
+        <ul class="catalog-list">
+          <li class="catalog-item card">
+            <h3 class="catalog-item-title">
               <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             </h3>
-            <img class="product-item-image" src="img/product-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <p class="product-item-price">
+            <img class="catalog-item-image" src="img/product-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <p class="catalog-item-price">
               <span>310</span> ₽/кг
             </p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
-          <li class="product-item">
-            <h3 class="product-item-title">
+          <li class="catalog-item card">
+            <h3 class="catalog-item-title">
               <a href="#">Сливочно-кофейное с кусочками шоколада</a>
             </h3>
-            <img class="product-item-image" src="img/product-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-            <p class="product-item-price">
+            <img class="catalog-item-image" src="img/product-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+            <p class="catalog-item-price">
               <span>380</span> ₽/кг
             </p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
-          <li class="product-item">
-            <h3 class="product-item-title">
+          <li class="catalog-item card">
+            <h3 class="catalog-item-title">
               <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             </h3>
-            <img class="product-item-image" src="img/product-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <p class="product-item-price">
+            <img class="catalog-item-image" src="img/product-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <p class="catalog-item-price">
               <span>355</span> ₽/кг
             </p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
-          <li class="product-item">
-            <h3 class="product-item-title">
+          <li class="catalog-item card">
+            <h3 class="catalog-item-title">
               <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
             </h3>
-            <img class="product-item-image" src="img/product-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-            <p class="product-item-price">
+            <img class="catalog-item-image" src="img/product-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+            <p class="catalog-item-price">
               <span>415</span> ₽/кг
             </p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
