@@ -55,10 +55,16 @@ body {
 }
 
 a {
-  color: rgba(255,255,255);
+  font-weight: 500;
+  color: #ffffff;
   text-decoration: none;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+a:hover,
+a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
 
 img {
@@ -141,6 +147,10 @@ img {
 .site-navigation a {
   font-weight: 700;
 }
+.site-navigation a:hover {
+  color: #323232;
+  border: 0;
+}
 .site-navigation .active {
   background-color: #d07058;
 }
@@ -159,14 +169,6 @@ img {
   font-size: 14px;
   color: #ffffff;
 }
-
-.popup,
-.popup a {
-  font-size: 13px;
-  color: #323232;
-  border-color: #323232; 
-}
-
 
 /*------------------------------
           BREADCRUMBS 
@@ -422,7 +424,23 @@ img {
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
+.modal a,
+.popup a {
+  color: #323232;
+  border-bottom: 1px solid #323232;
+}
+.modal a:hover,
+.modal a:active,
+.popup a:hover,
+.popup a:active  {
+  color: #e84d37;
+  border-bottom: 1px solid #e84d37;
+}
 
+.popup-login-bottom a {
+  font-size: 13px;
+  font-weight: 400;
+}
 
 .modal-feedback-title {
   font-size: 24px;
