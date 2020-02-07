@@ -121,7 +121,8 @@ img {
 .catalog-list,
 .about-list,
 .footer ul,
-.filter-options
+.filter-options,
+.catalog-pagination
 {
   list-style: none;
 }
@@ -227,6 +228,7 @@ img {
 
 .stocks .raspberries,
 .stocks .chocolate {
+  background-color: #849d8f;
   background-repeat: no-repeat;
 }
 
@@ -246,7 +248,10 @@ img {
   font-size: 16px;
   font-weight: 400;
 }
-
+.catalog-item {
+  width: 400px;
+  position: relative;
+}
 .catalog-item-price {
   font-size: 30px;
   font-weight: bold;
@@ -259,9 +264,11 @@ img {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.catalog-list .hit {
-  background-image: url('../img/hit.png');
-  background-repeat: no-repeat;
+.catalog-list .hit::after {
+  content: url('../img/hit.png');
+  position: absolute;
+  top: 60px;
+  left: 0;
 }
 
 
@@ -281,6 +288,24 @@ img {
   display: block;
 }
 
+.catalog-pagination a {
+  border: 0;
+}
+.catalog-pagination i {
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.catalog-pagination .left {
+  opacity: 0.2;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.catalog-pagination .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
 /*------------------------------
               ABOUT 
 -------------------------------*/
@@ -288,8 +313,9 @@ img {
   color: #323232;
 
   border-radius: 17px;
+  background-color: #849d8f;
   background-image: url('../img/about-bg.png');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .about .about-title {
   font-size: 24px;
@@ -301,17 +327,17 @@ img {
 .about-list li {
   background-repeat: no-repeat;
 }
-.about .production {
-  background-image: url('../img/about-icecream.png');
+.about .production::before {
+  content: url('../img/about-icecream.png');
 }
-.about .natural {
-  background-image: url('../img/about-leaf.png');
+.about .natural::before {
+  content: url('../img/about-leaf.png');
 }
-.about .orders {
-  background-image: url('../img/about-cow.png');
+.about .orders::before {
+  content: url('../img/about-cow.png');
 }
-.about .delivery {
-  background-image: url('../img/about-thermometer.png');
+.about .delivery::before {
+  content: url('../img/about-thermometer.png');
 }
 
 
@@ -407,12 +433,15 @@ img {
 }
 .footer-more-links .supplier {
   font-weight: bold;
-
-  background-image: url('../img/heart.svg');
-  background-repeat: no-repeat;
+}
+.footer-more-links .supplier::before {
+  content: url('../img/heart.svg');
 }
 .footer-htmlacademy {
   font-size: 12px;
+}
+.htmlacademy-logo {
+  border: 0;
 }
 
 
@@ -454,7 +483,10 @@ img {
   font-size: 16px;
   color: #999999;
 }
-
+.popup-cart {
+  font-size: 13px;
+  color: #323232;
+}
 .cart-products-delete {
   cursor: pointer;
   border: 0;
