@@ -269,6 +269,7 @@ img {
         CATALOG PRODUCTS  
 -------------------------------*/
 .card:hover {
+  cursor: pointer;
   border-radius: 5px;
   background-color: #9bafa3;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1);
