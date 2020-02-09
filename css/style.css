@@ -36,6 +36,8 @@ body {
   font-size: 16px;
   color: #ffffff;
   line-height: 22px;
+
+  background-color: #849d8f;
 }
 
 a {
@@ -92,10 +94,26 @@ img {
   padding: 10px;
 
   font-size: 14px;
+  font-weight: 700;
   color: #999999;
 
-  border: 1px solid #b2b2b2;
+  border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 5px;
+}
+.input::-webkit-input-placeholder { 
+  font-weight: 400; 
+}
+.input:focus::-webkit-input-placeholder { 
+  color: transparent; 
+}
+.input:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+.input:focus {
+  outline: none;
+
+  font-weight: 700;
+  border: 2px solid rgba(46, 136, 228, 0.52);
 }
 .user-navigation,
 .site-navigation,
@@ -111,8 +129,6 @@ img {
 {
   list-style: none;
 }
-
-
 .inner-page .title {
   font-size: 35px;
 } 
@@ -139,9 +155,13 @@ img {
 .site-navigation a {
   font-weight: 700;
 }
-.site-navigation a:hover {
+.site-navigation a:hover,
+.site-navigation a:focus {
   color: #323232;
   border: 0;
+}
+.lin:focus {
+  color: red;
 }
 .site-navigation .active {
   background-color: #d07058;
@@ -266,7 +286,8 @@ img {
 /*------------------------------
         CATALOG PRODUCTS  
 -------------------------------*/
-.card:hover {
+.card:hover,
+.card:focus {
   cursor: pointer;
   border-radius: 5px;
   background-color: #9bafa3;
@@ -275,7 +296,8 @@ img {
 .card .button {
   display: none;
 }
-.card:hover .button {
+.card:hover .button,
+.card:focus .button {
   display: block;
 }
 
@@ -495,8 +517,10 @@ img {
   border-bottom: 1px solid #323232;
 }
 .modal a:hover,
+.modal a:focus,
 .modal a:active,
 .popup a:hover,
+.popup a:focus,
 .popup a:active  {
   color: #e84d37;
   border-bottom: 1px solid #e84d37;
