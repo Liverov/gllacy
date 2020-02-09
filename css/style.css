@@ -3,43 +3,32 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/roboto-v20-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
-  src: local('Roboto'), local('Roboto-Regular'),
-       url('../fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  font-display: swap;
+  src: url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg'); /* Legacy iOS */
 }
 /* roboto-500 - latin_cyrillic */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/roboto-v20-latin_cyrillic-500.eot'); /* IE9 Compat Modes */
-  src: local('Roboto Medium'), local('Roboto-Medium'),
-       url('../fonts/roboto-v20-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'), /* Super Modern Browsers */
+  font-display: swap;
+  src: url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/roboto-v20-latin_cyrillic-500.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/roboto-v20-latin_cyrillic-500.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/roboto-v20-latin_cyrillic-500.svg#Roboto') format('svg'); /* Legacy iOS */
 }
 /* roboto-700 - latin_cyrillic */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/roboto-v20-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-       url('../fonts/roboto-v20-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+  font-display: swap;
+  src: url('../fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/roboto-v20-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/roboto-v20-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/roboto-v20-latin_cyrillic-700.svg#Roboto') format('svg'); /* Legacy iOS */
 }
 
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
 
@@ -47,11 +36,6 @@ body {
   font-size: 16px;
   color: #ffffff;
   line-height: 22px;
-
-  background-color: #849d8f;
-  background-image: url('../img/new-slider-1.png');
-  background-repeat: no-repeat;
-  background-position-x: center;
 }
 
 a {
@@ -62,7 +46,8 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 a:hover,
-a:active {
+a:active,
+a:focus {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
@@ -132,6 +117,12 @@ img {
   font-size: 35px;
 } 
 
+.wrap {
+  background-color: #849d8f;
+  background-image: url('../img/new-slider-1.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
 
 /*------------------ 
       HEADER   
@@ -325,19 +316,50 @@ img {
   padding-left: 0;
 }
 .about-list li {
-  background-repeat: no-repeat;
+  position: relative;
+}
+.about-list p {
+  padding-left: 60px;
 }
 .about .production::before {
-  content: url('../img/about-icecream.png');
+  content: "";
+  display: block;
+  position: absolute;
+  width: 49px;
+  height: 49px;
+
+  background-image: url('../img/about-icecream.png');
+  background-repeat: no-repeat;
 }
 .about .natural::before {
-  content: url('../img/about-leaf.png');
+  content: "";
+  display: block;
+  position: absolute;
+  width: 49px;
+  height: 49px;
+
+  background-image: url('../img/about-leaf.png');
+  background-repeat: no-repeat;
 }
 .about .orders::before {
-  content: url('../img/about-cow.png');
+  content: "";
+  display: block;
+  position: absolute;
+  width: 49px;
+  height: 49px;
+
+  background-image: url('../img/about-cow.png');
+  background-repeat: no-repeat;
 }
 .about .delivery::before {
-  content: url('../img/about-thermometer.png');
+  content: "";
+  display: block;
+  position: absolute;
+  width: 49px;
+  height: 49px;
+
+  background-image: url('../img/about-thermometer.png');
+  background-repeat: no-repeat;
 }
 
 
@@ -432,10 +454,23 @@ img {
   font-size: 13px;
 }
 .footer-more-links .supplier {
+  position: relative;
+
   font-weight: bold;
 }
+.footer-more-links .supplier a {
+  margin-left: 25px;
+}
 .footer-more-links .supplier::before {
-  content: url('../img/heart.svg');
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  width: 15px;
+  height: 13px;
+
+  background-image: url('../img/heart.svg');
+  background-repeat: no-repeat;
 }
 .footer-htmlacademy {
   font-size: 12px;
