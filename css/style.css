@@ -35,8 +35,6 @@ body {
   font-size: 16px;
   color: #ffffff;
   line-height: 22px;
-
-  background-color: #849d8f;
 }
 
 a {
@@ -86,9 +84,19 @@ img {
 
   border: none;
   border-radius: 25px;
-  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
 }
+.button:hover,
+.button:focus {
+  box-shadow: 0px 2px 2px 0 #ac1000;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+}
+.button:active {
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
+}
+
 .visually-hidden {
   position: absolute;
 
@@ -116,12 +124,10 @@ img {
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 5px;
 }
-.input::-webkit-input-placeholder { 
+.input::placeholder { 
   font-weight: 400; 
 }
-.input:focus::-webkit-input-placeholder { 
-  color: transparent; 
-}
+
 .input:hover {
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
@@ -179,20 +185,28 @@ img {
   background-color: #d07058;
 }
 .site-navigation-item > a:active {
-  box-shadow: inset 0px 2px 2px 0px rgba(105,105,105,1);
+  box-shadow: inset 0px 2px 1px 0 #696969;
   background-color: #ededed;
 }
-.site-navigation-dropdown a {
+.site-subnavigation a {
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
   color: #323232;
   border: none;
 }
-.site-navigation-dropdown li:first-child a {
+.site-subnavigation-item:first-child a {
   font-weight: 700;
 }
 
+.site-subnavigation-item a:hover,
+.site-subnavigation-item a:focus
+ {
+  background-color: #fbded7;
+}
+.site-subnavigation-item a:active {
+  background-color: #f6b5a5;
+}
 .user-navigation .navigation-label {
   font-size: 14px;
   color: #ffffff;
@@ -248,7 +262,7 @@ img {
   font-size: 32px;
   font-weight: bold;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-
+  
   border-radius: 50px;
 }
 
@@ -328,12 +342,15 @@ img {
 /*------------------------------
         CATALOG PRODUCTS  
 -------------------------------*/
+.card {
+  width: 293px;
+}
 .card:hover,
 .card:focus {
   cursor: pointer;
   border-radius: 5px;
-  background-color: #9bafa3;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1);
+  background-color: rgb(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.1);
 }
 .card .button {
   display: none;
@@ -416,6 +433,7 @@ img {
   content: "";
   display: block;
   position: absolute;
+  left: 0;
   width: 49px;
   height: 49px;
 
