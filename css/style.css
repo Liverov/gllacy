@@ -26,6 +26,9 @@
        url('../fonts/roboto-v20-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -37,36 +40,10 @@ body {
   line-height: 22px;
 }
 
+
 a {
   text-decoration: none;
 }
-
-.site-navigation a {
-  font-weight: 500;
-  color: #ffffff;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.site-navigation a:hover,
-.site-navigation a:active,
-.site-navigation a:focus {
-  color: #ffbc9e;
-  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
-} */
-/* a {
-  font-weight: 500;
-  color: #ffffff;
-  text-decoration: none;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-a:hover,
-a:active,
-a:focus {
-  color: #ffbc9e;
-  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
-} */
 
 img {
    max-width: 100%;
@@ -82,7 +59,7 @@ img {
   font-weight: 500;
   color: #ffffff;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  
+
   border: none;
   border-radius: 25px;
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
@@ -167,8 +144,11 @@ img {
 /*------------------------------
       HEADER NAVIGATION  
 -------------------------------*/
+
 .site-navigation-item > a {
   font-weight: 700;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .site-navigation-item > .active,
 .site-navigation-item > a:hover,
@@ -281,7 +261,7 @@ img {
 
 .stocks .raspberries,
 .stocks .chocolate {
-  background-color: #849d8f;
+  background-color: #3d120b;
   background-repeat: no-repeat;
 }
 
