@@ -8,7 +8,8 @@
   </head>
   <body>
     <div class="wrap">
-    <header class="main-header">
+
+    <header class="main-header container">
       <nav class="main-navigation">
 
         <a class="main-header-logo" href="">
@@ -17,7 +18,7 @@
 
         <ul class="site-navigation">
           <li class="site-navigation-item">
-            <a href="#">Каталог</a>
+            <a class="dropdown" href="#">Каталог</a>
             <ul class="site-subnavigation">
               <li class="site-subnavigation-item"><a href="#">Новинки</a></li>
               <li class="site-subnavigation-item"><a href="catalog.html">Сливочное</a></li>
@@ -27,7 +28,7 @@
             </ul>
           </li>
           <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
-          <li class="site-navigation-item"><a href="#">О компании</a></li>
+          <li class="site-navigation-item"><a href="#">О Компании</a></li>
         </ul>
 
         <ul class="user-navigation">
@@ -97,52 +98,52 @@
       </nav>
     </header>
     
-    <main class="container">
+    <main class="main-section">
 
-      <section class="contacts">
+      <section class="contacts container">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <p>
+        <div>
           С 10 до 20, ежедневно
           <a href="tel:88124502525">8 812 450-25-25</a>
-        </p>
+        </div>
       </section>
 
       <section class="slider">
         <h2 class="visually-hidden">Слайдер мороженого</h2>
-        <ul>
+        <ul class="slider-list">
           <li class="slider-item">
             <h3>Крем-брюле и пломбир с малиновым джемом</h3>
             <a class="button" href="#">Давайте оба!</a>
           </li>
-          <li class="slider-item">
+          <!-- <li class="slider-item">
             <h3>Шоколадный пломбир и лимонный сорбет</h3>
             <a class="button" href="#">Давайте оба!</a>
           </li>
           <li class="slider-item">
             <h3>Пломбир с помадкой и клубничный щербет</h3>
             <a class="button" href="#">Давайте оба!</a>
-          </li>  
+          </li>   -->
         </ul>
       </section>
 
-      <section class="stocks">
+      <section class="stocks container">
         <h2 class="visually-hidden">Акции</h2>
 
-        <article class="info-container raspberries">
+        <article class="article-container raspberries">
           <h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a class="button" href="#">Хочу варенье!</a>
         </article>
 
-        <article class="info-container chocolate">
+        <article class="article-container chocolate">
           <h3>Шоколадки даром!</h3>
-          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.      </p>
+          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно. </p>
           <a class="button" href="#">Хочу шоколадки!</a>
         </article>
 
       </section>
     
-      <section class="popular-products">
+      <section class="popular-products container">
         <h2 class="visually-hidden">Список популярного мороженого</h2>
         
         <ul class="catalog-list">
@@ -211,14 +212,14 @@
       </section>
 
 
-      <article class="info-container blog">
+      <article class="article-container blog">
         <h2 class="blog-title">Новое в нашем блоге</h2>
         <a class="blog-link" href="#">
           <h3>10 способов сервировки фруктовых щербетов к столу</h3>
         </a>
       </article>
 
-      <section class="info-container subscribe">
+      <section class="article-container subscribe">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
@@ -272,7 +273,7 @@
         </p>
       </div>
     </footer>
-    
+
     </div><!--WRAP-->
 
     <section class="modal modal-feedback">

@@ -49,6 +49,19 @@ img {
    max-width: 100%;
 }
 
+.wrap {
+  background-color: #849d8f;
+  background-image: url('../img/new-slider-1.png');
+  background-repeat: no-repeat;
+  background-position-x: 51.5%;
+}
+
+.container {
+  margin: auto;
+  padding: 0 27px;
+  max-width: 1200px;
+}
+
 .button {
   font: inherit;
 
@@ -87,7 +100,13 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.info-container {
+.article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 20px;
+
   width: 560px;
   height: 230px;
   border-radius: 17px;
@@ -133,20 +152,26 @@ img {
   font-size: 35px;
 } 
 
-.wrap {
-  background-color: #849d8f;
-  background-image: url('../img/new-slider-1.png');
-  background-repeat: no-repeat;
-  background-position-x: center;
-}
-
 
 /*------------------------------
       HEADER NAVIGATION  
 -------------------------------*/
-
+.main-navigation,
+.site-navigation,
+.user-navigation {
+  display: flex;
+}
+.main-navigation {
+  padding-top: 10px;
+}
+.site-navigation {
+  margin-left: 13px;
+  padding: 2px 0 0 0;
+}
 .site-navigation-item > a {
-  font-weight: 700;
+  margin: 0 13px;
+
+  font-weight: 500;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -154,7 +179,8 @@ img {
 .site-navigation-item > a:hover,
 .site-navigation-item > a:focus,
 .site-navigation-item > a:active {
-  padding: 6px 10px;
+  margin: 0;
+  padding: 6px 13px;
 
   color: #323232;
   border: none;
@@ -192,6 +218,15 @@ img {
   font-size: 14px;
   color: #ffffff;
 }
+/* .dropdown:hover + .site-subnavigation,
+.user-navigation-btn:hover + .popup 
+{
+  display: block;
+} */
+.user-navigation {
+  margin-left: auto;
+}
+
 
 /*------------------------------
           BREADCRUMBS 
@@ -211,15 +246,21 @@ img {
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
 
+
 /*------------------------------
             CONTACTS  
 -------------------------------*/
 .contacts {
+  margin-top: -9px;
+
   font-size: 14px;
   font-weight: 500;
+  text-align: right;
 }
 
 .contacts a {
+  display: block;
+  
   font-weight: 700;
   font-size: 22px;
   color: #ffffff;
@@ -230,7 +271,25 @@ img {
 /*------------------------------
             SLIDER  
 -------------------------------*/
+.slider {
+  margin-top: 200px;
+  padding-bottom: 2px;
+
+  overflow: hidden;
+
+  text-align: center;
+}
+.slider-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0;
+}
 .slider-item h3 {
+  max-width: 700px;
+
+  margin-bottom: 50px;
   line-height: 60px;
   font-size: 60px;
   font-weight: 700;
@@ -238,7 +297,7 @@ img {
 }
 
 .slider-item a {
-  padding: 15px 40px; 
+  padding: 13px 40px; 
 
   font-size: 32px;
   font-weight: bold;
@@ -252,15 +311,27 @@ img {
             STOCKS  
 -------------------------------*/
 .stocks {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 40px;
   font-size: 18px;
 }
 
 .stocks h3 {
+  margin-top: 5px;
+  margin-bottom: 8px;
   font-size: 35px;
+}
+
+.stocks p {
+  
+  font-weight: 700;
 }
 
 .stocks .raspberries,
 .stocks .chocolate {
+
   background-color: #3d120b;
   background-repeat: no-repeat;
 }
@@ -273,15 +344,39 @@ img {
   background-image: url('../img/stock-raspberries.jpg');
 }
 
+.stocks .button {
+  align-self: flex-end;
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+
 
 /*------------------------------
         POPULAR PRODUCTS  
 -------------------------------*/
+.popular-products {
+  margin-top: 40px;
+}
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 0;
+}
 .catalog-item {
-  width: 400px;
+  display: flex;
+  flex-basis: 266px;
+  flex-direction: column;
+  justify-content: center;
+  
   position: relative;
+
+  text-align: center;
 }
 .catalog-item-title {
+  order: 1;
+
   font-size: 16px;
   font-weight: 400;
 }
@@ -299,8 +394,14 @@ img {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
-
+.catalog-item-image {
+  position: relative;
+}
 .catalog-item-price {
+  order: 0;
+  position: absolute;
+  bottom: 65px;
+  left: 0;
   font-size: 30px;
   font-weight: bold;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
@@ -315,7 +416,7 @@ img {
 .catalog-list .hit::after {
   content: url('../img/hit.png');
   position: absolute;
-  top: 60px;
+  top: 0;
   left: 0;
 }
 
@@ -324,7 +425,7 @@ img {
         CATALOG PRODUCTS  
 -------------------------------*/
 .card {
-  width: 293px;
+
 }
 .card:hover,
 .card:focus {
@@ -577,7 +678,10 @@ img {
         MODALS & POPUP
 -------------------------------*/
 .modal,
-.popup {
+.popup,
+.site-subnavigation {
+  display: none;
+
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
