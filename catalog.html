@@ -32,9 +32,9 @@
 
         <ul class="user-navigation">
           <li>
-            <button class="user-navigation-btn icon-search" type="button"> 
+            <button class="user-navigation-btn search" type="button"> 
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px" height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
-                <path fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
+                <path class="user-navigation-svg" fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
                   S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
                   S11,4.019,11,6.5S8.981,11,6.5,11z"/>
               </svg>
@@ -50,10 +50,10 @@
           </li>
 
           <li>
-            <button class="user-navigation-btn icon-login" type="button"> 
+            <button class="user-navigation-btn login" type="button"> 
               <svg width="21" height="19">
-                <polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
-                <path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
+                <polygon class="user-navigation-svg" fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
+                <path class="user-navigation-svg" fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
                   />
               </svg>
               <span class="navigation-label">Вход</span>
@@ -82,13 +82,19 @@
           </li>
 
           <li>
-            <button class="user-navigation-btn icon-cart" type="button">
-              <svg width="21" height="20" >
-                <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
-                <circle fill="#343434" cx="6.984" cy="18" r="2"/>
-                <circle fill="#343434" cx="15.984" cy="18" r="2"/>
-                <path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+            <button class="user-navigation-btn cart" type="button">
+              <!-- <svg width="21" height="20" >
+                <polygon class="user-navigation-svg" fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
+                <circle class="user-navigation-svg" fill="#343434" cx="6.984" cy="18" r="2"/>
+                <circle class="user-navigation-svg" fill="#343434" cx="15.984" cy="18" r="2"/>
+                <path class="user-navigation-svg" fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
                   L17.372,13z"/>
+              </svg> -->
+              <svg width="21" height="20">
+                <path class="user-navigation-svg" fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+                  L17.372,13z"/>
+                <circle class="user-navigation-svg" fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
+                <circle class="user-navigation-svg" fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
               </svg>
               <span class="navigation-label">2 товара</span>
             </button>
@@ -142,21 +148,19 @@
       </nav>
     </header>
     
-    <main class="subheader container">
+    <main class="container">
 
-      <div class="subheader-block">
+      <div class="subheader">
         <ul class="breadcrumbs">
-          <li><a href="/index.html">Главная</a></li>
-          <li><a href="/catalog.html">Каталог</a></li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
           <li>Сливочное</li>
         </ul>
 
-        <section class="contacts">
+        <section class="contacts block">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <p>
-            С 10 до 20, ежедневно
+            <p>С 10 до 20, ежедневно</p>
             <a href="tel:88124502525">8 812 450-25-25</a>
-          </p>
         </section>
       </div>
 
@@ -196,26 +200,38 @@
               <legend class="filter-title">Жирность:</legend>
               <ul class="filter-options">
                 <li class="filter-option">
-                  <input class="input filter-input filter-input-radio" type="radio" name="richness-group" value="0" id="richness0">
-                  <label for="richness0">
+                  <label for="richness0"></label>
+                    <input class="input filter-input filter-input-radio" type="radio" name="richness-group" value="0" id="richness0">
+                    <span class="input-cover">
+
+                    </span>
                     0%
                   </label>
                 </li>
                 <li class="filter-option">
-                  <input class="input filter-input filter-input-radio" type="radio" name="richness-group" value="10" id="richness10" checked>
                   <label for="richness10">
+                    <input class="input filter-input filter-input-radio" type="radio" name="richness-group" value="10" id="richness10" checked>
+                    <span class="input-cover">
+
+                    </span>
                     до 10%
                   </label>
                 </li>
                 <li class="filter-option">
-                  <input class="input filter-input filter-input-radio" type="radio" name="richness-group" value="30" id="richness30">
                   <label for="richness30">
+                    <input class="input filter-input filter-input-radio" type="radio" name="richness-group" value="30" id="richness30">
+                    <span class="input-cover">
+
+                    </span>
                     до 30%
                   </label>
                 </li>
                 <li class="filter-option">
-                  <input class="input filter-input filter-input-radio" type="radio" name="richness-group" value="31" id="richness-more30">
                   <label for="richness-more30">
+                    <input class="input filter-input filter-input-radio" type="radio" name="richness-group" value="31" id="richness-more30">
+                    <span class="input-cover">
+
+                    </span>
                     выше 30%
                   </label>
                 </li>
@@ -257,6 +273,7 @@
         <h2 class="visually-hidden">Список мороженого</h2>
 
         <ul class="catalog-list">
+          
           <li class="catalog-item card">
             <h3 class="catalog-item-title">
               <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -266,7 +283,9 @@
               <span>310 ₽</span>/кг
             </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
+
           <li class="catalog-item card">
             <h3 class="catalog-item-title">
               <a href="#">Сливочно-кофейное с кусочками шоколада</a>
@@ -276,6 +295,7 @@
               <span>380 ₽</span>/кг
             </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
           <li class="catalog-item card">
             <h3 class="catalog-item-title">
@@ -286,6 +306,7 @@
               <span>355 ₽</span>/кг
             </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
           <li class="catalog-item card">
             <h3 class="catalog-item-title">
@@ -296,6 +317,7 @@
               <span>415 ₽</span>/кг
             </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
 
           <li class="catalog-item card">
@@ -307,6 +329,7 @@
                 <span>325 ₽</span>/кг
               </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
           <li class="catalog-item card">
               <h3 class="catalog-item-title">
@@ -317,6 +340,7 @@
                 <span>410 ₽</span>/кг
               </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
           <li class="catalog-item card">
               <h3 class="catalog-item-title">
@@ -327,6 +351,7 @@
                 <span>375 ₽</span>/кг
               </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
           <li class="catalog-item card">
               <h3 class="catalog-item-title">
@@ -337,6 +362,7 @@
                 <span>320 ₽</span>/кг
               </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
 
           <li class="catalog-item card">
@@ -348,6 +374,7 @@
                 <span>440 ₽</span>/кг
               </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
           <li class="catalog-item card">
               <h3 class="catalog-item-title">
@@ -358,6 +385,7 @@
                 <span>435 ₽</span>/кг
               </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
           <li class="catalog-item card">
               <h3 class="catalog-item-title">
@@ -368,6 +396,7 @@
                 <span>355 ₽</span>/кг
               </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
           <li class="catalog-item card">
               <h3 class="catalog-item-title">
@@ -378,6 +407,7 @@
                 <span>420 ₽</span>/кг
               </p>
             <button class="button" type="button">Быстрый просмотр</button>
+            <div class="cover"></div>
           </li>
         </ul>
         
@@ -399,8 +429,7 @@
 
         <li>
           <a href="#" class="social-icon twitter" title="Мы в Twitter">
-            <svg width="32px"
-            height="32px">
+            <svg width="32" height="32">
               <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.164,0,16c0,8.837,7.164,16,16,16c8.837,0,16-7.163,16-16C32,7.164,24.837,0,16,0z
                 M23.944,12.809c-0.251,6.516-3.463,10.832-10.992,10.702c-0.14,0-0.205,0-0.233,0c-0.015,0-0.021,0-0.021,0
                 c-0.029,0-0.094,0-0.232,0c-0.447,0-4.543-0.443-5.344-1.823c2.479,0.19,4.247-0.406,5.12-1.136
@@ -415,7 +444,7 @@
 
         <li>
           <a href="#" class="social-icon instagram" title="Мы в Instagram">
-            <svg width="32px" height="32px">
+            <svg width="32" height="32">
               <path fill="#FFFFFF" d="M20.916,16c0,2.728-2.211,4.938-4.938,4.938S11.039,18.728,11.039,16c0-0.394,0.051-0.773,0.138-1.14
                 h-0.897v6.838h11.396V14.86h-0.897C20.865,15.227,20.916,15.606,20.916,16z"/>
               <path fill="#FFFFFF" d="M15.978,18.659c1.466,0,2.659-1.193,2.659-2.659s-1.193-2.659-2.659-2.659
@@ -431,7 +460,7 @@
 
         <li>
           <a href="#" class="social-icon facebook" title="Мы в Facebook">
-            <svg width="32px" height="32px">
+            <svg width="32" height="32">
               <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
                 v3.444h3.021v3.445h-3.021v8.61h-3.021v-8.61H11v-3.445h3.021V9.455c0-1.902,1.353-3.445,3.021-3.445h3.021V9.455z"/>
             </svg>
@@ -441,7 +470,7 @@
 
         <li>
           <a href="#" class="social-icon" title="Мы в ВКонтакте">
-              <svg class="social-icon-svg" width="32px" height="32px">
+              <svg class="social-icon-svg" width="32" height="32">
                 <path fill="#FFFFFF" d="M16.637,14.495c0.402-0.019,0.719-0.082,0.951-0.188c0.326-0.145,0.54-0.33,0.641-0.559
                 c0.101-0.229,0.15-0.496,0.15-0.797c0-0.232-0.058-0.465-0.174-0.697c-0.116-0.232-0.322-0.405-0.617-0.517
                 c-0.264-0.1-0.592-0.155-0.984-0.165c-0.392-0.009-0.943-0.014-1.652-0.014h-0.339v2.965h0.565
