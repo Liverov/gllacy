@@ -37,7 +37,7 @@
         <ul class="user-navigation">
           <li>
             <button class="user-navigation-btn search" type="button"> 
-              <svg width="17" height="17" class="search-svg">
+              <svg class="user-navigation-icon icon-search" width="17" height="17" class="search-svg">
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
                   S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
                   S11,4.019,11,6.5S8.981,11,6.5,11z"/>
@@ -55,12 +55,12 @@
 
           <li>
             <button class="user-navigation-btn login" type="button"> 
-              <svg width="21" height="19">
+              <svg class="user-navigation-icon icon-login" width="21" height="19">
                 <polygon class="user-navigation-svg" fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959"/>
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
                   />
               </svg>
-              <span class="navigation-label">Вход</span>
+              Вход
             </button>
             <div class="popup popup-login">
               <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -87,13 +87,13 @@
 
           <li>
             <button class="user-navigation-btn cart" type="button">
-              <svg width="21" height="20">
+              <svg class="user-navigation-icon icon-cart" width="21" height="20">
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
                   L17.372,13z"/>
                 <circle class="user-navigation-svg" fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
                 <circle class="user-navigation-svg" fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
               </svg>
-              <span class="navigation-label">Пусто</span>
+              Пусто
             </button>
           </li>
         </ul>
@@ -101,17 +101,16 @@
       </nav>
     </header>
     
-    <main class="main-section">
+    <main class="container main-section">
 
-      <div class="container">
-        <section class="contacts block">
-          <h2 class="visually-hidden">Наши контакты</h2>
-            <p>С 10 до 20, ежедневно</p>
-            <a href="tel:88124502525">8 812 450-25-25</a>
-        </section>
-      </div>
+      <section class="block contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <p>С 10 до 20, ежедневно</p>
+        <a href="tel:88124502525">8 812 450-25-25</a>
+      </section>
 
-      <section class="slider container">
+
+      <section class="slider">
         <h2 class="visually-hidden">Слайдер мороженого</h2>
 
         <div class="slider-controls">
@@ -136,7 +135,7 @@
         </ul>
       </section>
 
-      <section class="stocks container">
+      <section class="stocks">
         <h2 class="visually-hidden">Акции</h2>
 
         <article class="article-container raspberries">
@@ -153,7 +152,7 @@
 
       </section>
     
-      <section class="popular-products container block">
+      <section class="popular-products block">
         <h2 class="visually-hidden">Список популярного мороженого</h2>
         
         <ul class="catalog-list">
