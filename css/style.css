@@ -118,10 +118,12 @@ img {
 }
 
 .input:hover {
-  padding: 10px;
+  padding: 10px 11px;
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
 .input:focus {
+  padding: 10px 11px;
+  
   outline: none;
 
   font-weight: 700;
@@ -570,7 +572,13 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
-
+.slider-controls label:hover,
+.slider-controls label:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.slider-controls label:active {
+  background-color: #ffffff;
+}
 #product-1:checked ~ .wrap {
   background-color: #849d8f;
   background-image: url("../img/new-slider-1.png");
@@ -834,8 +842,8 @@ img {
 .about {
   min-height: 306px;
 
-  margin-top: 23px;
-  padding: 24px 20px 2px 20px;
+  margin-top: 21px;
+  padding: 24px 20px 20px 20px;
 
   color: #323232;
 
@@ -1095,7 +1103,7 @@ li.orders p  {
 }
 .footer-links-list {
   margin: 0;
-  padding: 1px 0 0 0;
+  padding: 0;
 
   display: flex;
   flex-wrap: wrap;
@@ -1156,7 +1164,7 @@ li.orders p  {
   border: none;
 }
 .footer-htmlacademy p {
-  margin-top: -4px;
+  margin-top: -5px;
   padding: 0;
 }
 .footer-htmlacademy-link {
