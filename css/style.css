@@ -40,8 +40,6 @@ body {
   font-size: 16px;
   color: #ffffff;
   line-height: 22px;
-
-  background-color: #849d8f;
 }
 
 
@@ -114,6 +112,7 @@ img {
 }
 
 .input:hover {
+  padding: 10px;
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
 .input:focus {
@@ -148,6 +147,7 @@ img {
 .site-navigation,
 .user-navigation {
   display: flex;
+  flex-wrap: wrap;
 }
 .main-navigation {
   padding-top: 9px;
@@ -158,9 +158,10 @@ img {
   margin-left: 9px;
   padding: 3px 0 0 0;
 }
+.site-navigation-item {
+  padding: 0 14px;
+}
 .site-navigation-item > a {
-  margin: 0 14px;
-
   font-weight: 500;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -169,8 +170,8 @@ img {
 .site-navigation-item > a:hover,
 .site-navigation-item > a:focus,
 .site-navigation-item > a:active {
-  margin: 0;
-  padding: 6px 13px;
+  margin: 0 -14px;
+  padding: 6px 14px;
 
   color: #323232;
   border: none;
@@ -206,15 +207,16 @@ img {
   background-color: #f6b5a5;
 }
 
+
 .user-navigation {
   margin: 0;
   margin-top: 14px;
 }
-.user-navigation > li:first-child,
-.user-navigation > li:nth-child(2) 
-{
-  margin-right: 10px;
+
+.user-navigation-item {
+  padding-left: 10px;
 }
+
 .user-navigation-btn {
   position: relative;
 
@@ -253,6 +255,8 @@ img {
 
 .user-navigation-btn:hover,
 .user-navigation-btn:focus {
+  margin-left: -1px;
+
   cursor: pointer;
 
   font-weight: 500;
@@ -456,7 +460,7 @@ img {
 .stocks {
   display: flex;
   justify-content: space-between;
-
+  align-items: flex-start;
   margin-top: 37px;
   font-size: 18px;
 }
@@ -465,7 +469,7 @@ img {
   padding: 20px 20px 20px 18px;
 
   width: 560px;
-  height: 229px;
+  min-height: 229px;
   border-radius: 14px;
 }
 
@@ -484,6 +488,7 @@ img {
 .stocks .raspberries,
 .stocks .chocolate {
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .stocks .chocolate {
@@ -565,8 +570,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  position: relative;
+  align-items: flex-start;
 
   margin: 0;
   padding: 0;
@@ -575,7 +579,6 @@ img {
   display: flex;
   flex-basis: 266px;
   flex-direction: column;
-  justify-content: center;
 
   text-align: center;
 }
@@ -812,14 +815,16 @@ li.orders p  {
 .newsletter-blog {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .blog,
 .newsletter {
-  height: 220px;
+  min-height: 220px;
 }
 .blog {
   background-image: url('../img/blog-bg.png');
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .blog-title {
