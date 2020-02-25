@@ -41,7 +41,13 @@ body {
   color: #ffffff;
   line-height: 22px;
 }
+body.inner-page {
+  background-color: #849d8f;
+  background-image: url('../img/inner-bg.png');
+  background-repeat: repeat-x;
+  background-position: top;
 
+}
 
 a {
   text-decoration: none;
@@ -135,10 +141,6 @@ img {
 {
   list-style: none;
 }
-.inner-page .title {
-  font-size: 35px;
-} 
-
 
 /*------------------------------
       HEADER NAVIGATION  
@@ -255,11 +257,8 @@ img {
 
 .user-navigation-btn:hover,
 .user-navigation-btn:focus {
-  margin-left: -1px;
-
   cursor: pointer;
 
-  font-weight: 500;
   color: #323232;
 
   background-color: #f8f7f4;
@@ -279,12 +278,14 @@ img {
 /*------------------------------
           BREADCRUMBS 
 -------------------------------*/
+.breadcrumbs {
+  margin: 17px 0 0 0;
+}
 .breadcrumbs,
 .subheader
 {
   display: flex;
   justify-content: space-between;
-
   padding: 0;
 }
 .breadcrumbs,
@@ -305,8 +306,151 @@ img {
 .breadcrumbs li:not(:last-child)::after {
   content: "»";
 
-  padding: 0px 5px;
+  padding: 0px 7px;
 }
+
+.inner-page .title {
+  margin: 10px 0 0 0;
+  font-size: 35px;
+}
+
+/*------------------------------
+            FILTERS 
+-------------------------------*/
+.filters {
+  margin-top: 33px;
+  max-width: 860px;
+}
+.filters-form,
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter {
+  margin: 0 15px 0 0;
+  padding: 0;
+  border: none;
+}
+.filters .filter-title {
+  margin-bottom: 4px;
+  padding-left: 16px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+.filter-option label,
+.sort-list {
+  font-weight: 500;
+}
+.filter-input-radio {
+  background-image: url('../img/radio-on.svg');
+}
+.sort-list option {
+  color: #323232;
+}
+.filters-button {
+  color: #ffffff;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+
+.filter-sort .sort-list {
+  color: #ffffff;
+  
+  padding: 7px 16px 6px 11px;
+
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.range-filter {
+  width: 220px;
+}
+
+.range-controls {
+  position: relative;
+
+  padding: 16px 22px 16px 20px;
+  
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.range-controls .scale {
+  height: 4px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 55%;
+  height: 4px;
+  margin-left: 20px;
+
+  background: #f8f7f4;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 2px;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.range-controls .toggle:hover,
+.range-controls .toggle:focus {
+  top: 7px;
+  border: 9px solid #ffffff;
+}
+
+.range-controls .toggle-min {
+  left: 34px;
+}
+
+.range-controls .toggle-max {
+  left: 132px;
+}
+
+.price-controls {
+  margin-bottom: -2px;
+  padding-left: 15px;
+  padding-top: 1px;
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 47.5%;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.price-controls input {
+  width: 25px;
+  
+  color: #ffffff;
+  font-weight: 500;
+
+  background: none;
+  border: none;
+}
+
+.filter-richness .filter-input-radio {
+  background: none;
+  border: none;
+}
+
 /*------------------------------
             CONTACTS  
 -------------------------------*/
@@ -638,55 +782,7 @@ img {
 }
 
 
-/*------------------------------
-            FILTERS 
--------------------------------*/
-.filters {
-  max-width: 860px;
-}
-.filters-form,
-.filter-options {
-  display: flex;
-  flex-wrap: wrap;
-}
-.filter {
-  border: none;
-}
-.filters .filter-title {
-  font-size: 14px;
-  font-weight: 500;
-}
-.filter-option label,
-.sort-list {
-  font-weight: 500;
-}
-.filter-input-radio {
-  background-image: url('../img/radio-on.svg');
-}
-.sort-list option {
-  color: #323232;
-}
-.filters-button {
-  color: #ffffff;
-  font-size: inherit;
-  font-weight: 500;
-}
 
-
-.filter-sort .sort-list {
-  color: #ffffff;
-  
-  padding: 7px 16px 6px 16px;
-
-  border: none;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.filter-richness .filter-input-radio {
-  background: none;
-  border: none;
-}
 /*------------------------------
          PAGINATION 
 -------------------------------*/

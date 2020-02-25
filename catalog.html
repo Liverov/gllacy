@@ -38,7 +38,7 @@
                   S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
                   S11,4.019,11,6.5S8.981,11,6.5,11z"/>
               </svg>
-              Поиск
+              <div class="visually-hidden">Поиск</div>
             </button>
             <div class="popup popup-search">
               <form class="search-form" action="http://echo.htmlacademy.ru" method="get">
@@ -184,15 +184,29 @@
 
           <fieldset class="filter filter-price">
             
-            <legend class="filter-title">Цена: 100 Руб. - 500 руб.</legend>
+            <legend class="visually-hidden">Цена:</legend>
 
-            <label for="min-price-filter">От</label>
+            <div class="range-filter">
+              <div class="price-controls">
+                <label class="min-price">Цена: <input name="min-price" type="text" value="100" disabled> руб.</label>
+                <label class="max-price"> &ndash; <input name="max-price" type="text" value="500" disabled> руб.</label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+            </div>
+
+            <!-- <label for="min-price-filter">От</label>
             <input class="filter-input filter-input-min" type="number" name="min-price" id="min-price-filter">
             
             <div class="range-line"></div>
 
             <label for="max-price-filter">До</label>
-            <input class="filter-input filter-input-max" type="number" name="max-price" id="max-price-filter">
+            <input class="filter-input filter-input-max" type="number" name="max-price" id="max-price-filter"> -->
 
           </fieldset>
 
