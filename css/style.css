@@ -321,20 +321,20 @@ img {
 -------------------------------*/
 .filters {
   margin-top: 33px;
-  max-width: 860px;
+  max-width: 861px;
 }
-.filters-form,
-.filter-options {
+.filters-form {
   display: flex;
   flex-wrap: wrap;
 }
 .filter {
-  margin: 0 15px 0 0;
+  margin: 0 14px 0 0;
   padding: 0;
   border: none;
 }
+
 .filters .filter-title {
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   padding-left: 16px;
 
   font-size: 14px;
@@ -344,29 +344,59 @@ img {
 .sort-list {
   font-weight: 500;
 }
-.filter-input-radio {
-  background-image: url('../img/radio-on.svg');
-}
-.sort-list option {
-  color: #323232;
-}
-.filters-button {
-  color: #ffffff;
-  font-size: inherit;
-  font-weight: 500;
-}
-
-
-.filter-sort .sort-list {
-  color: #ffffff;
-  
-  padding: 7px 16px 6px 11px;
-
-  border: none;
+.filter-cover {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.filters-button {
+  margin-top: 38px;
+  padding: 5px 27px 5px 28px;
+
+  color: #ffffff;
+  font-size: inherit;
+  font-weight: 500;
+
+  border: solid 2px #ffffff;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-option label {
+  position: relative;
+
+  padding-left: 30px;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+.filter-input:disabled + label {
+  color: #000000;
+
+  opacity: 0.5;
+}
+.filter-input:disabled + label {
+  color: #000000;
+
+  opacity: 0.5;
+}
+
+/*  SORT LIST */
+.sort-list option {
+  color: #323232;
+}
+
+.filter-sort .sort-list {
+  padding: 7px 16px 8px 11px;
+
+  color: #ffffff;
+  border: none;
+}
+
+
+/*  RANGE SLIDER */
 .range-filter {
   width: 220px;
 }
@@ -374,10 +404,7 @@ img {
 .range-controls {
   position: relative;
 
-  padding: 16px 22px 16px 20px;
-  
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  padding: 16px 22px 16px 22px;
 }
 
 .range-controls .scale {
@@ -448,10 +475,89 @@ img {
   border: none;
 }
 
-.filter-richness .filter-input-radio {
-  background: none;
-  border: none;
+
+.filter-richness {
+  margin: 0;
+  min-width: 415px;
 }
+.filter-richness .filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 7px 18px 7px 15px;
+}
+
+/*  RADIO */
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 22px;
+  height: 22px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+
+/*  CHECKBOXES */
+.filter-filler {
+  margin-top: 13px;
+  min-width: 702px;
+}
+.filter-filler .filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  margin: 0;
+  padding: 7px 8px 7px 6px;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 1px;
+
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+}
+.filter-input-checkbox:checked + label::before {
+  display:none;
+}
+.filter-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 1px;
+  left: -1px;
+  width: 23px;
+  height: 23px;
+  
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  
+}
+
 
 /*------------------------------
             CONTACTS  
@@ -669,9 +775,15 @@ img {
   max-width: 190px;
   padding: 10px 23px 13px 21px;
 }
+
+
+
 /*------------------------------
         CATALOG PRODUCTS  
 -------------------------------*/
+.catalog {
+  margin-top: 40px;
+}
 .card:hover,
 .card:focus {
   flex: none;
@@ -683,15 +795,19 @@ img {
 .card {
   position: relative;
 }
-.card:hover .cover {
+.card::before {
+  content: "";
   z-index: 1;
   position: absolute;
   top: -6px;
   left: -14px;
   width: 293px;
-  height: 405px;
+  height: calc(100% + 65px);
 
   border-radius: 5px;
+}
+
+.card:hover::before {
   background-color: rgb(248, 247, 244, 0.2);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
