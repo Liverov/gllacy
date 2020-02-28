@@ -118,11 +118,11 @@ img {
 }
 
 .input:hover {
-  padding: 10px 11px;
+  padding: 11px;
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
 .input:focus {
-  padding: 10px 11px;
+  padding: 11px;
   
   outline: none;
 
@@ -233,9 +233,6 @@ img {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.user-navigation-icon {
-  position: absolute;
-}
 .user-navigation-btn.search {
   position: relative;
   width: 32px;
@@ -249,6 +246,7 @@ img {
 }
 .icon-cart,
 .icon-login {
+  position: absolute;
   top: 6px;
   left: 16px;
 }
@@ -269,7 +267,18 @@ img {
 .user-navigation-btn:focus .user-navigation-svg {
   fill: #323232;
 }
-
+.inner-page .cart {
+  background-color: #f8f7f4;
+  color: #323232;
+  font-weight: 500;
+}
+.cart-active path,
+.cart-active circle {
+  fill: #323232;
+}
+.cart-active polygon {
+  fill: #e84d37;
+}
 
 /* .dropdown:hover + .site-subnavigation,
 .user-navigation-btn:hover + .popup 
@@ -349,19 +358,6 @@ img {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.filters-button {
-  margin-top: 38px;
-  padding: 5px 27px 5px 28px;
-
-  color: #ffffff;
-  font-size: inherit;
-  font-weight: 500;
-
-  border: solid 2px #ffffff;
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
 .filter-option label {
   position: relative;
 
@@ -384,17 +380,49 @@ img {
 }
 
 /*  SORT LIST */
-.sort-list option {
-  color: #323232;
-}
-
-.filter-sort .sort-list {
-  padding: 7px 16px 8px 11px;
+.sort-list {
+  padding: 10px 33px 8px 16px;
 
   color: #ffffff;
   border: none;
-}
 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.sort-list::-ms-expand {
+  display: none;
+}
+.sort-list option {
+  color: #323232;
+}
+.select-wrapper {
+  position: relative;
+}
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 13px;
+  right: 14px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #ffffff;
+}
+.select-wrapper:hover .sort-list,
+.select-wrapper:focus .sort-list,
+.select-wrapper:active .sort-list
+{
+  color: #323232;
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+.select-wrapper:hover::after,
+.select-wrapper:focus::after 
+{
+  border-top: 10px solid #000000;
+}
 
 /*  RANGE SLIDER */
 .range-filter {
@@ -475,7 +503,6 @@ img {
   border: none;
 }
 
-
 .filter-richness {
   margin: 0;
   min-width: 415px;
@@ -497,10 +524,14 @@ img {
   top: 0px;
   width: 22px;
   height: 22px;
-  border: 4px solid #ffffff;
+  border: 4px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
-
+.filter-input-radio:hover + label::before,
+.filter-input-radio:focus + label::before
+{
+  border: 4px solid rgba(255, 255, 255, 1);
+}
 .filter-input-radio:checked + label::after {
   content: "";
   position: absolute;
@@ -508,10 +539,12 @@ img {
   left: 7px;
   width: 8px;
   height: 8px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
-
+.filter-input-radio:checked:hover + label::after {
+  background-color: rgba(255, 255, 255, 1);
+}
 
 /*  CHECKBOXES */
 .filter-filler {
@@ -539,6 +572,11 @@ img {
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 3px;
 }
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox + label:focus::before {
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+
 .filter-input-checkbox:checked + label::before {
   display:none;
 }
@@ -555,10 +593,36 @@ img {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
-  
+
+  opacity: 0.8;
 }
+.filter-input-checkbox:checked + label:hover::after {
+  opacity: 1;
+}
+/* BUTTON */
+.filters-button {
+  margin-top: 38px;
+  padding: 5px 27px 5px 28px;
 
+  color: #ffffff;
+  font-size: inherit;
+  font-weight: 500;
 
+  border: solid 2px #ffffff;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.filters-button:hover,
+.filters-button:focus
+{
+  color: #323232;
+  background-color: #ffffff;
+}
+.filters-button:active {
+  box-shadow: inset 0px 2px 1px 0 #696969;
+  background-color: #ededed;
+  border: none;
+}
 /*------------------------------
             CONTACTS  
 -------------------------------*/
@@ -802,7 +866,7 @@ img {
   top: -6px;
   left: -14px;
   width: 293px;
-  height: calc(100% + 65px);
+  height: calc(100% + 45px);
 
   border-radius: 5px;
 }
@@ -829,7 +893,7 @@ img {
 .card:hover > .button,
 .card:focus > .button {
   position: absolute;
-  bottom: -40px;
+  bottom: -15px;
   left: 30px;
   display: block;
 }
@@ -847,6 +911,7 @@ img {
   display: flex;
   flex-basis: 266px;
   flex-direction: column;
+  min-height: 362px;
 
   text-align: center;
 }
@@ -910,15 +975,24 @@ img {
 /*------------------------------
          PAGINATION 
 -------------------------------*/
+.catalog-pagination {
+  margin-left: auto;
+  margin-top: 45px;
+  width: 187px;
+  padding: 0;
+}
 .catalog-pagination .back {
   margin-right: 8px;
+}
+.catalog-pagination .next {
+  margin-left: 10px;
 }
 .catalog-pagination li {
   display: inline-block;
 }
 
 .catalog-pagination a {
-  padding: 3px 8px;
+  padding: 4px 8px 3px 8px;
 
   color: #ffffff;
   font-weight: 500;
@@ -940,7 +1014,7 @@ img {
   border: solid white;
   border-width: 0 1px 1px 0;
   display: inline-block;
-  padding: 3px;
+  padding: 4px;
 }
 .catalog-pagination .left {
   opacity: 0.2;
@@ -1170,9 +1244,10 @@ li.orders p  {
   padding-top: 2px;
 }
 .inner-page .footer {
-  margin-top: 40px;
-  padding-top: 35px;
-  padding-bottom: 33px;
+  width: calc(1200px - 50px);
+  margin: 31px auto;
+  padding: 16px 0;
+
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 .footer-social
@@ -1180,7 +1255,7 @@ li.orders p  {
   display: flex;
   
   margin-top: 20px;
-  margin-left: 1px;
+  margin-left: 2px;
   padding: 0;
 }
 .footer-social .social-icon {
@@ -1296,13 +1371,18 @@ li.orders p  {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
+
+
+
 /*------------------------------
         MODALS & POPUP
 -------------------------------*/
-.modal,
 .popup,
-.site-subnavigation {
+.site-subnavigation{
   display: none;
+}
+.modal {
+  position: absolute;
 
   background-color: #f8f7f4;
   border-radius: 5px;
@@ -1328,7 +1408,21 @@ li.orders p  {
   font-weight: 400;
 }
 
+
+/*  FEEDBACK  */
+.modal-feedback {
+  width: 477px;
+
+  top: 338px;
+  left: 50%;
+
+  padding: 20px 25px;
+  margin-left: -237px;
+}
 .modal-feedback-title {
+  padding: 0;
+  margin: 0;
+
   font-size: 24px;
   font-weight: 500;
   color: #323232;
@@ -1339,6 +1433,8 @@ li.orders p  {
   font-size: 16px;
   color: #999999;
 }
+
+
 .popup-cart {
   font-size: 13px;
   color: #323232;
