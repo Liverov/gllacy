@@ -289,8 +289,11 @@ img {
   border-radius: 50%;
 }
 .user-navigation-item:hover > .popup-search,
+.user-navigation-item:focus > .popup-search,
 .user-navigation-item:hover > .popup-login,
-.user-navigation-item:hover > .popup-cart
+.user-navigation-item:focus > .popup-login,
+.user-navigation-item:hover > .popup-cart,
+.user-navigation-item:focus > .popup-cart
 {
   display: block;
 }
@@ -846,7 +849,6 @@ img {
 }
 
 .stocks p {
-  padding-left: 1px;
   margin-bottom: 43px;
 
   font-weight: 700;
@@ -856,6 +858,7 @@ img {
 .stocks .chocolate {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .stocks .chocolate {
