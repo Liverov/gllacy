@@ -1448,10 +1448,14 @@ li.orders p  {
 .modal-close {
   position: absolute;
   top: 14px;
-  right: 22px;
+  right: 15px;
 
   width: 18px;
   height: 18px;
+
+  padding: 0;
+  margin: 0;
+
 
   background: none;
   border: 0;
