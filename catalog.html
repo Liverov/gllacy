@@ -11,7 +11,7 @@
     <header class="main-header container">
       <nav class="main-navigation">
 
-        <a class="main-header-logo" href="">
+        <a class="main-header-logo" href="index.html">
           <img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Глейси">
         </a>
 
@@ -32,8 +32,8 @@
 
         <ul class="user-navigation">
           <li class="user-navigation-item">
-            <button class="user-navigation-btn search" type="button"> 
-              <svg class="user-navigation-icon icon-search" width="17" height="17">
+            <button class="user-navigation-btn search-button" type="button"> 
+              <svg class="user-navigation-icon" width="17" height="17">
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
                   S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
                   S11,4.019,11,6.5S8.981,11,6.5,11z"/>
@@ -43,7 +43,7 @@
             <div class="popup popup-search">
               <form class="search-form" action="http://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="search-field">Поиск по сайту</label>
-                <input class="input" type="search" name="search" id="search-field" placeholder="Крем-брюле">
+                <input class="input input-search" type="search" name="search" id="search-field" placeholder="Крем-брюле">
                 <button class="visually-hidden" type="submit">Искать</button>
               </form>
             </div>
@@ -51,8 +51,8 @@
 
           <li class="user-navigation-item">
             <button class="user-navigation-btn login" type="button"> 
-              <svg class="icon-login" width="21" height="19">
-                <polygon class="user-navigation-svg" fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
+              <svg class="user-navigation-icon icon-login" width="21" height="19">
+                <polygon class="user-navigation-svg" fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959"/>
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
                   />
               </svg>
@@ -63,16 +63,16 @@
                 <p>
                   <label class="visually-hidden" for="user-login">Логин</label>
                   <input class="input login-field-email" id="user-login" type="email" name="login" placeholder="email@example.com">
-                </p>
+                </p >
                 <p>
                   <label class="visually-hidden" for="user-password">Пароль</label>
                   <input class="input login-field-password" id="user-password" type="password" name="password" placeholder="••••••••">
                 </p>
                 <div class="popup-login-bottom">
-                  <button class="button" type="submit">
+                  <button class="button login-button" type="submit">
                     Войти
                   </button>
-                  <ul>
+                  <ul class="popup-login-links">
                     <li><a class="restore" href="#">Забыли пароль?</a></li>
                     <li><a class="register" href="#">Новая регистрация</a></li>
                   </ul>
@@ -82,6 +82,7 @@
           </li>
 
           <li class="user-navigation-item">
+
             <button class="user-navigation-btn cart" type="button">
               <svg class="icon-cart cart-active" width="21" height="20">
                 <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
@@ -92,50 +93,43 @@
               </svg>
               2 товара
             </button>
-            <div class="popup popup-cart">
+
+            <div class="popup popup-cart popup-cart_text_s">
               <form class="cart-form" action="http://echo.htmlacademy.ru" method="post">
-                    <table class="cart-products">
-                      <thead class="visually-hidden">
-                        <tr>
-                          <th>Удалить</th>
-                          <th>Фото</th>
-                          <th>Название мороженного</th>
-                          <th>Количество</th>
-                          <th>Цена</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <button class="cart-products-delete" type="button">
-                              <img src="img/delete.png" width="11" height="11" alt="Удалить Пломбир с апельсиновым джемом">
-                            </button>
-                          </td>
-                          <td><img class="cart-products-image" src="img/icecream-1.jpg" width="33" height="33" alt="Мороженое пломбир с апельсиновым джемом"></td>
-                          <td>Пломбир с апельсиновым джемом</td>
-                          <td>1,5 кг х <span class="cart-price">200 руб.</span></td>
-                          <td>300 руб.</td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <button class="cart-products-delete" type="button">
-                              <img src="img/delete.png" width="11" height="11" alt="Удалить Пломбир с апельсиновым джемом">
-                            </button>
-                          </td>
-                          <td><img class="cart-products-image" src="img/icecream-2.jpg" width="33" height="33" alt="Мороженое пломбир с апельсиновым джемом"></td>
-                          <td>Клубничный пломбир с присыпкой 
-                            из белого шоколада</td>
-                          <td>1,5 кг х <span class="cart-price">300 руб.</span></td>
-                          <td>450 руб.</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <div class="cart-products-summ">
-                      <b>Итого: 750 руб.</b>
-                    </div>
-                    <button class="button" id="order" type="submit">Оформить заказ</button>
+                <ul class="cart-list">
+                  <li class="cart-list__item">
+                    <button class="cart-item__delete">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11" height="11" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve">
+                        <polygon fill="#231F20" points="10.979,0.728 10.271,0.021 5.5,4.792 0.729,0.021 0.021,0.728 4.793,5.5 0.021,10.271 0.728,10.979 
+                        5.5,6.207 10.271,10.979 10.979,10.271 6.207,5.5 "/>
+                      </svg>
+                      <span class="visually-hidden">Удалить Пломбир с апельсиновым джемом</span>
+                    </button>
+                    <img class="cart-item__image" src="img/icecream-1.jpg" width="33" height="33" alt="Мороженое пломбир с апельсиновым джемом">
+                    <p class="cart-item__title cart-item_text">Пломбир с апельсиновым джемом</p>
+                    <p class="cart-item__count cart-item_text">1,5 кг х <span class="cart-price">200 руб.</span></p>
+                    <p class="cart-item__price cart-item_text">300 руб.</p>
+                  </li>
+
+                  <li class="cart-list__item">
+                    <button class="cart-item__delete">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11" height="11" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve">
+                        <polygon fill="#231F20" points="10.979,0.728 10.271,0.021 5.5,4.792 0.729,0.021 0.021,0.728 4.793,5.5 0.021,10.271 0.728,10.979 
+                        5.5,6.207 10.271,10.979 10.979,10.271 6.207,5.5 "/>
+                      </svg>
+                      <span class="visually-hidden">Удалить Клубничный пломбир с присыпкой из белого шоколада</span>
+                    </button>
+                    <img class="cart-item__image" src="img/icecream-2.jpg" width="33" height="33" alt="Мороженое пломбир с апельсиновым джемом">
+                    <p class="cart-item__title cart-item_text">Клубничный пломбир с присыпкой из белого шоколада</p>
+                    <p class="cart-item__count cart-item_text">1,5 кг х <span class="cart-price">300 руб.</span></p>
+                    <p class="cart-item__price cart-item_text">450 руб.</p>
+                  </li>
+                </ul>
+                <div class="cart__summ">Итого: 750 руб.</div>
+                <button class="button cart__button" id="order" type="submit">Оформить заказ</button>
               </form>
-            </div>
+            </div><!--POPUP CART-->
+
           </li>
         </ul>
 
