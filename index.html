@@ -37,7 +37,7 @@
         <ul class="user-navigation">
           <li class="user-navigation-item">
             <button class="user-navigation-btn search-button" type="button"> 
-              <svg class="user-navigation-icon icon-search" width="17" height="17">
+              <svg class="user-navigation-icon" width="17" height="17">
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
                   S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
                   S11,4.019,11,6.5S8.981,11,6.5,11z"/>
@@ -47,7 +47,7 @@
             <div class="popup popup-search">
               <form class="search-form" action="http://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="search-field">Поиск по сайту</label>
-                <input class="input" type="search" name="search" id="search-field" placeholder="Крем-брюле">
+                <input class="input input-search" type="search" name="search" id="search-field" placeholder="Крем-брюле">
                 <button class="visually-hidden" type="submit">Искать</button>
               </form>
             </div>
@@ -73,10 +73,10 @@
                   <input class="input login-field-password" id="user-password" type="password" name="password" placeholder="••••••••">
                 </p>
                 <div class="popup-login-bottom">
-                  <button class="button" type="submit">
+                  <button class="button login-button" type="submit">
                     Войти
                   </button>
-                  <ul>
+                  <ul class="popup-login-links">
                     <li><a class="restore" href="#">Забыли пароль?</a></li>
                     <li><a class="register" href="#">Новая регистрация</a></li>
                   </ul>
@@ -355,7 +355,7 @@
         </p>
 
         <label class="visually-hidden" for="feedback-message">Сообщение:</label>
-        <textarea class="textarea feedback-field-message" id="feedback-message" name="text" cols="48" rows="7">В свободной форме</textarea>
+        <textarea class="textarea feedback-field-message" id="feedback-message" name="text" cols="48" rows="6">В свободной форме</textarea>
 
         <button class="button" type="submit">Отправить</button>
       </form>
