@@ -1480,6 +1480,8 @@ li.orders p  {
   padding-bottom: 4px;
 }
 .modal-feedback {
+  display: none;
+  
   width: 477px;
   top: 50%;
   left: 50%;
