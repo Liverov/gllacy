@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="inner-page">
 
@@ -44,7 +44,7 @@
               <form class="search-form" action="http://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="search-field">Поиск по сайту</label>
                 <input class="input input-search" type="search" name="search" id="search-field" placeholder="Крем-брюле">
-                <button class="visually-hidden" type="submit">Искать</button>
+                <button class="visually-hidden" type="submit" tabindex="-1">Искать</button>
               </form>
             </div>
           </li>
@@ -62,11 +62,11 @@
               <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <p>
                   <label class="visually-hidden" for="user-login">Логин</label>
-                  <input class="input login-field-email" id="user-login" type="email" name="login" placeholder="email@example.com">
+                  <input class="input login-field-email" id="user-login" type="email" name="login" placeholder="email@example.com" required>
                 </p >
                 <p>
                   <label class="visually-hidden" for="user-password">Пароль</label>
-                  <input class="input login-field-password" id="user-password" type="password" name="password" placeholder="••••••••">
+                  <input class="input login-field-password" id="user-password" type="password" name="password" placeholder="••••••••" required>
                 </p>
                 <div class="popup-login-bottom">
                   <button class="button login-button" type="submit">
@@ -99,7 +99,7 @@
                 <ul class="cart-list">
                   <li class="cart-list__item">
                     <button class="cart-item__delete">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11" height="11" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve">
+                      <svg width="11" height="11">
                         <polygon fill="#231F20" points="10.979,0.728 10.271,0.021 5.5,4.792 0.729,0.021 0.021,0.728 4.793,5.5 0.021,10.271 0.728,10.979 
                         5.5,6.207 10.271,10.979 10.979,10.271 6.207,5.5 "/>
                       </svg>
@@ -113,7 +113,7 @@
 
                   <li class="cart-list__item">
                     <button class="cart-item__delete">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11" height="11" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve">
+                      <svg width="11" height="11">
                         <polygon fill="#231F20" points="10.979,0.728 10.271,0.021 5.5,4.792 0.729,0.021 0.021,0.728 4.793,5.5 0.021,10.271 0.728,10.979 
                         5.5,6.207 10.271,10.979 10.979,10.271 6.207,5.5 "/>
                       </svg>
@@ -376,13 +376,13 @@
         </ul>
         
         <ul class="catalog-pagination">
-          <li class="back"><i class="left"></i></li>
-          <li><a class="current" href="">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li class="next"><i class="right"></i></li>
+          <li class="back"><a class="pagination-arrow pagination-arrow__left" href="#"></a></li>
+          <li><a class="pagination__item current" href="">1</a></li>
+          <li><a class="pagination__item" href="#">2</a></li>
+          <li><a class="pagination__item" href="#">3</a></li>
+          <li><a class="pagination__item" href="#">4</a></li>
+          <li><a class="pagination__item" href="#">5</a></li>
+          <li class="next"><a class="pagination-arrow pagination-arrow__right" href="#"></a></li>
         </ul>
 
       </section>
@@ -471,6 +471,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

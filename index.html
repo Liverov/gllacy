@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
@@ -48,7 +48,7 @@
               <form class="search-form" action="http://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="search-field">Поиск по сайту</label>
                 <input class="input input-search" type="search" name="search" id="search-field" placeholder="Крем-брюле">
-                <button class="visually-hidden" type="submit">Искать</button>
+                <button class="visually-hidden" type="submit" tabindex="-1">Искать</button>
               </form>
             </div>
           </li>
@@ -206,16 +206,16 @@
           <p class="about-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
 
           <ul class="about-list">
-            <li class="production">
+            <li class="about-list__item production">
               <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
             </li>
-            <li class="orders">
+            <li class="about-list__item orders">
               <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
             </li>
-            <li class="natural">
+            <li class="about-list__item natural">
               <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
             </li>
-            <li class="delivery">
+            <li class="about-list__item delivery">
               <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
             </li>
           </ul>
@@ -242,21 +242,21 @@
         </section>
       </div>
 
-      <section class="address-map">
-        <h2 class="visually-hidden">Наш адрес на карте</h2>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3d7a33f24301a8359feb32ac65e263f5cb2cec6a8b633f2b53112b71a855329e&amp;source=constructor" width="100%" height="430" frameborder="0"></iframe>
-        <img class="visually-hidden address-map-image" src="img/map.png" width="1200" height="430" alt="Мы находимся по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        <div class="address-map-text">
-          <p>Адрес главного офиса и офлайн-магазина:</p>
-          <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-          <p>Для заказов по телефону:</p>
-          <a class="telephone" href="tel:88124502525">8 812 450-25-25</a>
-          <p>(с 10 до 20 ежедневно)</p>
-          <a class="feedback-button button" href="#">Форма обратной связи</a>
-        </div>
-      </section>
-
     </main>
+    
+    <section class="address-map">
+      <h2 class="visually-hidden">Наш адрес на карте</h2>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3d7a33f24301a8359feb32ac65e263f5cb2cec6a8b633f2b53112b71a855329e&amp;source=constructor" height="430"></iframe>
+      <img class="address-map-image" src="img/map.png" width="1200" height="430" alt="Мы находимся по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      <div class="address-map-text">
+        <p>Адрес главного офиса и офлайн-магазина:</p>
+        <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+        <p>Для заказов по телефону:</p>
+        <a class="telephone" href="tel:88124502525">8 812 450-25-25</a>
+        <p>(с 10 до 20 ежедневно)</p>
+        <a class="feedback-button button" href="form.html">Форма обратной связи</a>
+      </div>
+    </section>
 
     <footer class="footer container">
       <ul class="footer-social">
@@ -374,6 +374,6 @@
 
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
