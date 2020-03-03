@@ -950,7 +950,7 @@ img {
 }
 
 .card:hover::before {
-  background-color: rgb(248, 247, 244, 0.2);
+  background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
