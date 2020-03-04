@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+    <input class="visually-hidden slide-1" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden slide-2" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden slide-3" type="radio" id="product-3" name="toggle">
     <div class="wrap">
 
     <header class="main-header container">
@@ -36,7 +36,7 @@
 
         <ul class="user-navigation">
           <li class="user-navigation-item">
-            <button class="user-navigation-btn search-button" type="button"> 
+            <button class="user-navigation-btn button-search" type="button"> 
               <svg class="user-navigation-icon" width="17" height="17">
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
                   S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
@@ -54,7 +54,7 @@
           </li>
 
           <li class="user-navigation-item">
-            <button class="user-navigation-btn login" type="button"> 
+            <button class="user-navigation-btn button-login" type="button"> 
               <svg class="user-navigation-icon icon-login" width="21" height="19">
                 <polygon class="user-navigation-svg" fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959"/>
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
@@ -86,7 +86,7 @@
           </li>
 
           <li class="user-navigation-item">
-            <button class="user-navigation-btn cart" type="button">
+            <button class="user-navigation-btn button-cart" type="button">
               <svg class="user-navigation-icon icon-cart" width="21" height="20">
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
                   L17.372,13z"/>
@@ -99,16 +99,15 @@
         </ul>
 
       </nav>
-    </header>
-    
-    <main class="container main-section">
 
-      <section class="block contacts">
+      <section class="contacts contacts-wrap">
         <h2 class="visually-hidden">Наши контакты</h2>
         <p>С 10 до 20, ежедневно</p>
         <a href="tel:88124502525">8 812 450-25-25</a>
       </section>
-
+    </header>
+    
+    <main class="container main-section">
 
       <section class="slider">
         <h2 class="visually-hidden">Слайдер мороженого</h2>
@@ -120,16 +119,16 @@
         </div>
 
         <ul class="slider-list">
-          <li class="slider-item slide" id="slide1">
-            <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
+          <li class="slider-item slide slider-item-1" id="slide1">
+            <h3 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h3>
             <a class="button" href="#">Давайте оба!</a>
           </li>
-          <li class="slider-item slide" id="slide2">
-            <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
+          <li class="slider-item slide slider-item-2" id="slide2">
+            <h3 class="slider-title">Шоколадный пломбир и лимонный сорбет</h3>
             <a class="button" href="#">Давайте оба!</a>
           </li>
-          <li class="slider-item slide" id="slide3">
-            <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
+          <li class="slider-item slide slider-item-3" id="slide3">
+            <h3 class="slider-title">Пломбир с помадкой и клубничный щербет</h3>
             <a class="button" href="#">Давайте оба!</a>
           </li>  
         </ul>
@@ -139,20 +138,20 @@
         <h2 class="visually-hidden">Акции</h2>
 
         <article class="article-container raspberries">
-          <h3>Малинка даром!</h3>
+          <h3 class="stocks-title">Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a class="button" href="#">Хочу варенье!</a>
         </article>
 
         <article class="article-container chocolate">
-          <h3>Шоколадки даром!</h3>
+          <h3 class="stocks-title">Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно. </p>
           <a class="button" href="#">Хочу шоколадки!</a>
         </article>
 
       </section>
     
-      <section class="popular-products block">
+      <section class="popular-products products-wrap">
         <h2 class="visually-hidden">Список популярного мороженого</h2>
         
         <ul class="catalog-list">
@@ -206,26 +205,26 @@
           <p class="about-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
 
           <ul class="about-list">
-            <li class="about-list__item production">
+            <li class="about-list__item about-list__item-production">
               <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
             </li>
-            <li class="about-list__item orders">
+            <li class="about-list__item about-list__item-orders">
               <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
             </li>
-            <li class="about-list__item natural">
+            <li class="about-list__item about-list__item-natural">
               <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
             </li>
-            <li class="about-list__item delivery">
+            <li class="about-list__item about-list__item-delivery">
               <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
             </li>
           </ul>
       </section>
 
-      <div class="newsletter-blog block">
+      <div class="newsletter-blog blog-wrap">
         <article class="article-container blog">
           <h2 class="blog-title">Новое в нашем блоге</h2>
           <a class="blog-link" href="#">
-            <h3>10 способов сервировки фруктовых щербетов к столу</h3>
+            <h3 class="blog-link-title">10 способов сервировки фруктовых щербетов к столу</h3>
           </a>
         </article>
 
@@ -254,7 +253,7 @@
         <p>Для заказов по телефону:</p>
         <a class="telephone" href="tel:88124502525">8 812 450-25-25</a>
         <p>(с 10 до 20 ежедневно)</p>
-        <a class="feedback-button button" href="form.html">Форма обратной связи</a>
+        <a class="feedback-button button" href="#">Форма обратной связи</a>
       </div>
     </section>
 
@@ -346,7 +345,7 @@
     <section class="modal modal-feedback">
       <h2 class="modal-feedback-title">Мы обязательно вам ответим!</h2>
 
-      <form  class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label class="visually-hidden" for="feedback-name">Ваше имя:</label>
           <input class="input feedback-field-name" id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
@@ -358,7 +357,7 @@
         </p>
 
         <label class="visually-hidden" for="feedback-message">Сообщение:</label>
-        <textarea class="textarea feedback-field-message" id="feedback-message" name="text" cols="48" rows="6">В свободной форме</textarea>
+        <textarea class="input feedback-field-message" id="feedback-message" name="text" cols="48" rows="6" placeholder="В свободной форме"></textarea>
 
         <button class="button" type="submit">Отправить</button>
       </form>
@@ -374,6 +373,6 @@
 
     </section>
 
-    <script src="js/script.min.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
   </body>
 </html>

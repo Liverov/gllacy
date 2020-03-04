@@ -32,7 +32,7 @@
 
         <ul class="user-navigation">
           <li class="user-navigation-item">
-            <button class="user-navigation-btn search-button" type="button"> 
+            <button class="user-navigation-btn button-search" type="button"> 
               <svg class="user-navigation-icon" width="17" height="17">
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
                   S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
@@ -50,7 +50,7 @@
           </li>
 
           <li class="user-navigation-item">
-            <button class="user-navigation-btn login" type="button"> 
+            <button class="user-navigation-btn button-login" type="button"> 
               <svg class="user-navigation-icon icon-login" width="21" height="19">
                 <polygon class="user-navigation-svg" fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959"/>
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
@@ -62,11 +62,11 @@
               <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <p>
                   <label class="visually-hidden" for="user-login">Логин</label>
-                  <input class="input login-field-email" id="user-login" type="email" name="login" placeholder="email@example.com" required>
+                  <input class="input login-field-email" id="user-login" type="email" name="login" placeholder="email@example.com">
                 </p >
                 <p>
                   <label class="visually-hidden" for="user-password">Пароль</label>
-                  <input class="input login-field-password" id="user-password" type="password" name="password" placeholder="••••••••" required>
+                  <input class="input login-field-password" id="user-password" type="password" name="password" placeholder="••••••••">
                 </p>
                 <div class="popup-login-bottom">
                   <button class="button login-button" type="submit">
@@ -83,7 +83,7 @@
 
           <li class="user-navigation-item">
 
-            <button class="user-navigation-btn cart" type="button">
+            <button class="user-navigation-btn button-cart" type="button">
               <svg class="icon-cart cart-active" width="21" height="20">
                 <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
                 <path class="user-navigation-svg" fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
@@ -134,23 +134,23 @@
         </ul>
 
       </nav>
+
+      <section class="contacts contacts-wrap">
+        <h2 class="visually-hidden">Наши контакты</h2>
+          <p>С 10 до 20, ежедневно</p>
+          <a href="tel:88124502525">8 812 450-25-25</a>
+      </section>
+
     </header>
     
     <main class="container">
 
-      <div class="subheader">
+
         <ul class="breadcrumbs">
           <li><a href="index.html">Главная</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li>Сливочное</li>
         </ul>
-
-        <section class="contacts block">
-          <h2 class="visually-hidden">Наши контакты</h2>
-            <p>С 10 до 20, ежедневно</p>
-            <a href="tel:88124502525">8 812 450-25-25</a>
-        </section>
-      </div>
 
       <h1 class="title">Сливочное мороженое</h1>
     
@@ -377,7 +377,7 @@
         
         <ul class="catalog-pagination">
           <li class="back"><a class="pagination-arrow pagination-arrow__left" href="#"></a></li>
-          <li><a class="pagination__item current" href="">1</a></li>
+          <li><a class="pagination__item pagination__current" href="">1</a></li>
           <li><a class="pagination__item" href="#">2</a></li>
           <li><a class="pagination__item" href="#">3</a></li>
           <li><a class="pagination__item" href="#">4</a></li>
@@ -471,6 +471,6 @@
       </div>
     </footer>
 
-    <script src="js/script.min.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
   </body>
 </html>
