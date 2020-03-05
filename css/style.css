@@ -249,8 +249,7 @@ img {
   overflow: hidden;
   
 }
-.site-navigation-item:hover > .site-subnavigation,
-.dropdown:focus + .site-subnavigation {
+.site-navigation-item:hover > .site-subnavigation {
   display: block;
 
   -webkit-animation: open 0.6s;
@@ -263,7 +262,7 @@ img {
   color: rgb(50,50,50);
   border: none;
 }
-.site-subnavigation-item:first-child:after {
+.site-subnavigation-item:first-child::after {
   content: "";
   position: absolute;
   left: 7px;
@@ -644,10 +643,13 @@ img {
   border: 4px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
-.filter-input-radio:hover + label::before,
+.filter-input-radio:hover + label::before {
+  border: 4px solid rgb(255, 255, 255);
+}
 .filter-input-radio:focus + label::before
 {
   border: 4px solid rgb(255, 255, 255);
+  outline: rgb(113, 157, 206) solid 2px;
 }
 .filter-input-radio:checked + label::after {
   content: "";
@@ -691,9 +693,14 @@ img {
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 3px;
 }
-.filter-input-checkbox + label:hover::before,
-.filter-input-checkbox + label:focus::before {
+
+.filter-input-checkbox:hover + label::before {
   border: 2px solid rgb(255, 255, 255);
+}
+
+.filter-input-checkbox:checked:focus + label::after,
+.filter-input-checkbox:focus + label::before {
+  outline: rgb(113, 157, 206) solid 2px;
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -1839,4 +1846,9 @@ img {
   display: block;
   margin: 14px 14px 21px auto;
   padding: 14px 15px;
+}
+
+/* COMMON */
+.display-block {
+  display: block;
 }

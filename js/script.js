@@ -30,6 +30,11 @@ try {
 if(modal_feedback) {
     feedback_form.addEventListener("submit", function(evt) {
         if(!feedback_field_email.value || !feedback_field_message.value) {
+            if(!feedback_field_name.value) {
+                feedback_field_name.classList.add("field-error");
+            } else {
+                feedback_field_name.classList.remove("field-error");
+            }
             if(!feedback_field_email.value) {
                 feedback_field_email.classList.add("field-error");
             }  else {
@@ -40,6 +45,7 @@ if(modal_feedback) {
             } else {
                 feedback_field_message.classList.remove("field-error");
             }
+
             evt.preventDefault();
             modal_feedback.classList.remove("modal-error");
             modal_feedback.width = modal_feedback.offsetWidth;
@@ -121,6 +127,55 @@ if(newsletter_block) {
         }
     });
 }
+
+
+/* DROPDOWN MENU */
+var dropdown_link = document.querySelector(".dropdown");
+var menu_dropdown = document.querySelector(".site-subnavigation");
+var menu_dropdown_link = menu_dropdown.querySelector(".site-subnavigation-item:last-child");
+dropdown_link.addEventListener('focus', function() {
+    //if(evt.keyCode === 32) {
+        menu_dropdown.classList.add("display-block");
+    //}
+});
+menu_dropdown_link.addEventListener('focusout', function() {
+    menu_dropdown.classList.remove("display-block");
+});
+
+
+/* DROPDOWN SEARCH */
+var button_search = document.querySelector(".button-search");
+var popup_search = document.querySelector(".popup-search");
+
+button_search.addEventListener('focus', function() {
+    popup_search.classList.add("display-block");
+});
+input_search.addEventListener('focusout', function() {
+    popup_search.classList.remove("display-block");
+});
+
+
+/* DROPDOWN LOGIN */
+var button_login = document.querySelector(".button-login");
+var popup_login = document.querySelector(".popup-login");
+button_login.addEventListener('focus', function() {
+    popup_login.classList.add("display-block");
+});
+document.querySelector(".register").addEventListener('focusout', function() {
+    popup_login.classList.remove("display-block");
+});
+
+/* DROPDOWN CART */
+var button_cart = document.querySelector(".button-cart");
+var popup_cart = document.querySelector(".popup-cart");
+var cart_button = popup_cart.querySelector(".cart__button");
+button_cart.addEventListener('focus', function() {
+    popup_cart.classList.add("display-block");
+});
+cart_button.addEventListener('focusout', function() {
+    popup_cart.classList.remove("display-block");
+});
+
 
 /* PRODUCT CARD */
 var cards = document.querySelectorAll('.card');
