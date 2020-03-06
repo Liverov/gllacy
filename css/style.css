@@ -234,7 +234,7 @@ img {
 .site-subnavigation {
   display: none;
 
-  z-index: 1;
+  z-index: 4;
   position: absolute;
   top: 30px;
   left: -6px;
@@ -376,6 +376,8 @@ img {
             CONTACTS  
 -------------------------------*/
 .contacts-wrap {
+  z-index: 1;
+
   position: absolute;
   right: 26px;
   top: 80px;
@@ -407,7 +409,7 @@ img {
   display: flex;
 
   padding: 0;
-  margin: 15px 0 0 0;
+  margin: 16px 0 0 0;
 }
 .breadcrumbs,
 .breadcrumbs a {
@@ -493,7 +495,8 @@ img {
 
 /*  SORT LIST */
 .sort-list {
-  padding: 10px 33px 8px 16px;
+  width: 194px;
+  padding: 10px 29px 9px 12px;
 
   color: rgb(255, 255, 255);
   border: none;
@@ -760,7 +763,7 @@ img {
   background-repeat: no-repeat;
   background-position-x: 51.3%;
 
-  transition: background-image 0.5s ease, background-color 0.5s ease;
+  transition: background-image 0.7s ease, background-color 0.7s ease;
 }
 
 .slider {
@@ -789,7 +792,7 @@ img {
 }
 
 .slider-item .slider-title {
-  margin-bottom: 21px;
+  margin-bottom: 31px;
 
   line-height: 60px;
   font-size: 60px;
@@ -798,7 +801,11 @@ img {
 }
 
 .slider-item a {
-  padding: 13px 41px;
+  display: block;
+
+  width: 280px;
+
+  padding: 0 40px 3px 40px;
   margin: 0 auto;
 
   font-size: 32px;
@@ -810,9 +817,9 @@ img {
 
 .slider-controls {
   position: absolute;
-  bottom: 28px;
+  bottom: 29px;
   left: 0;
-  z-index: 20;
+  z-index: 4;
   
   font-size: 0;
 }
@@ -834,6 +841,7 @@ img {
 .slider-controls label:focus {
   background-color: rgba(255, 255, 255, 0.4);
 }
+
 .slider-controls label:active {
   background-color: rgb(255, 255, 255);
 }
@@ -871,7 +879,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 36px;
+  margin-top: 34px;
   font-size: 18px;
 }
 
@@ -884,13 +892,15 @@ img {
 }
 
 .stocks-title {
-  margin-top: 5px;
-  margin-bottom: 26px;
+  margin-top: -4px;
+  margin-bottom: -3px;
   font-size: 35px;
+
+  line-height: 41px;
 }
 
 .stocks p {
-  margin-bottom: 43px;
+  margin-bottom: 44px;
 
   font-weight: 700;
 }
@@ -1480,7 +1490,7 @@ img {
   background-repeat: no-repeat;
 }
 .footer-htmlacademy {
-  padding-top: 1px;
+  padding-top: 3px;
 
   font-size: 12px;
 }
@@ -1733,7 +1743,6 @@ img {
 
 /* LOGIN */
 .popup-login {
-  z-index: 1;
   top: 36px;
   right: -1px;
 
@@ -1774,7 +1783,6 @@ img {
 
 /* CART */
 .popup-cart {
-  z-index: 1;
   top: 36px;
   right: 0;
 }
