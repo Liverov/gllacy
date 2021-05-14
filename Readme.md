@@ -1,6 +1,6 @@
 # Boxed проект «Глейси»
 
-* Антон Ливеров
+Демо: https://liverov.github.io/gllacy/index.html
 
 ### Стек
 1. HTML
